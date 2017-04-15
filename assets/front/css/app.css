@@ -1,0 +1,259 @@
+.main_btn .main_down:hover, .main_btn .main_shou:hover {
+    color: rgb(135, 199, 27);
+}
+
+.main-content {
+    min-height: 880px;
+    width: 1200px;
+    margin: auto;
+}
+.main-header .nav-right .btn
+{
+    line-height: 20px;
+}
+.btn_zhuc .btn
+{
+    line-height: 42px;
+    height: auto;
+}
+.main-content .container
+{
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.pagination .current
+{
+    background-color: #ddd;
+}
+.filter-container
+{
+    margin: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+.filter-container .control-group
+{
+    padding-right: 0px;
+}
+.filter-container .control-label
+{
+    padding: 0px;
+    line-height: 30px;
+    font-weight: normal;
+}
+.filter-container .control
+{
+    padding: 0px;
+}
+.filter-container .control-group
+{
+    margin-right: 0px;
+    text-align: left;
+}
+.filter-container .btn
+{
+    margin: 0px;
+    height:36px;
+    line-height: 20px;
+    /*width: 120px;*/
+}
+.filter-container .input-group
+{
+
+}
+.form-control
+{
+    border: 1px solid #D6D6E2;
+}
+
+.modal-list .list-box
+{
+    position: relative;
+    min-height: 160px;
+}
+.modal-list .list-box .grey14
+{
+    position: absolute;
+    top: 95px;
+    display: block;
+    width: 100%;
+}
+.modal-list .list-box .grey14 .tags
+{
+    display: inline-block;
+}
+.modal-list .list-box .grey14 .time
+{
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+}
+.modal-list .list-box .list-body
+{
+    margin-top: 10px;
+}
+.modal-detail .modal-container {
+    padding: 15px 2px;
+    border: 1px solid #ddd;
+}
+.modal-detail .modal-block
+{
+    margin-top: 10px;
+}
+.modal-detail .modal-clear {
+    clear: left;
+}
+.modal-detail .modal-detail-block label
+{
+    width: 65px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: normal;
+}
+.modal-detail .typo
+{
+    display: none;
+}
+.modal-detail .tmbrdr
+{
+    width: 118px !important;
+    height: 88px !important;
+    border-width: 2px !important;
+}
+.modal-detail .image-slider .right,.modal-detail .image-slider .left
+{
+    width: 19px !important;
+    background-color: #DDDDCB;
+}
+.modal-detail .image-slider .left
+{
+    margin-left: 0px !important;
+}
+
+.modal-detail .modal-title
+{
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.modal-detail .modal-title strong
+{
+    font-weight: bold;
+}
+.relative-modal-list
+{
+
+}
+.relative-modal-list img
+{
+    max-width: 228px;
+}
+.relative-modal-list .item-description
+{
+    text-align: left;
+    padding-left: 5px;
+
+    margin-top: 10px;
+}
+.relative-modal-list .item-description .title
+{
+    font-size: 16px;
+    color: #87c71c;
+}
+.relative-modal-list .item-description .intro
+{
+    margin-top: 2px;
+    font-size: 12px;
+    color: #939393;
+}
+.relative-modal-list .item .one_main
+{
+    height: auto;
+    padding-bottom: 10px;
+}
+.relative-modalnew-list .list-box
+{
+   text-align: left;
+}
+.relative-modalnew-list .list-box .list-body
+{
+    padding-top: 10px;
+}
+.add-on{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.add-on .icon-calendar
+{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-position: -192px -120px;
+    background-image: url("http://www.eyecon.ro/bootstrap-datepicker/img/glyphicons-halflings.png");
+}
+.input-search
+{
+    color: black;
+}
+.advance-list .grey14
+{
+    position: static;
+}
+.advance-list .modal-item.list-box
+{
+    padding-bottom: 10px;
+}
+
+.main-header .nav .li
+{
+    min-width: 80px;
+    width: auto;
+}
+.main_btn .main_down.undownloadable:hover{
+ color: #939393;
+}
+.main_shou-ex{
+    margin-left: 130px;
+    margin-top: 10px;
+}
+.loading,.loading-shoppingcart{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    background: #000;
+    display: none;
+    z-index: 999;
+}
+.loading .loading-image,.loading-shoppingcart .loading-image{
+    background-image: url("../images/loading.gif");
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    margin-top: 200px;
+}
+.slideViewer{
+    height: 366px !important;
+}
+.modal-detail .modal-container > .col-sm-8.left-content
+{
+    overflow: hidden !important;
+    height: 436px !important;
+}
+.modal-detail .modal-container .col-sm-8.left-content .shown-content img{
+    max-width: 532px !important;
+    max-height: 400px !important;
+}
+.modal-detail .modal-container .col-sm-8.left-content .modal-image-item{
+    height:528px !important;
+}

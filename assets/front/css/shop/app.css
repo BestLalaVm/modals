@@ -1,0 +1,91 @@
+body.site-shop
+{
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: 16px !important;
+}
+.site-shop .head{
+    height: 80px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+.site-shop .head .nav .active
+{
+    background-color: #0b94ea;
+}
+.site-shop .head .nav .li
+{
+    border-color: #f2f2f2;
+}
+.site-shop .head .nav .li a
+{
+    color: black;
+}
+.site-shop .head > .row
+{
+    margin-top: 15px;
+}
+.site-shop .head .nav .li a:hover,.site-shop .nav-right .login-btn:hover
+{
+    background-color: #fff !important;
+    color: #0b94ea;
+}
+.site-shop .header .carousel.slide .carousel-inner>.item>a>img
+{
+    max-width: 1200px !important;
+    max-height: 325px !important;
+}
+.site-shop .nav-right
+{
+    line-height: 44px;
+}
+/*footer*/
+.site-shop .main-footer .jbr_footer
+{
+    background-image: none;
+}
+.site-shop .main-footer *
+{
+    color: black !important;
+}
+.site-shop .main-footer {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+.site-shop .main-footer #footer
+{
+    width: 1200px;
+    margin: auto;
+}
+.site-shop .foot {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    min-height: 190px;
+    padding: 40px 0;
+}
+.site-shop .foot-column {
+    margin: 0;
+}
+.site-shop .foot-column li {
+    float: left;
+    width: 20%;
+}
+.site-shop .foot-column li h3 {
+    color: #010101;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+}
+.site-shop ul.flinks {
+    margin: 0;
+}
+.site-shop .foot .flinks li {
+    float: left;
+    width: 100%;
+    line-height: 28px;
+}
+.site-shop .foot .flinks li a {
+    color: #505050;
+    font-size: 12px;
+    font-weight: normal;
+}

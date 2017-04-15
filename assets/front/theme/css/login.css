@@ -1,0 +1,219 @@
+.login-c {
+	width: 350px;
+	padding: 0 0px;
+	position: fixed;
+	top: 200px;
+	left: 800px;
+	border: 1px solid #f0f0f0;
+	z-index:9;
+	background-color: #fff;
+}
+.login-c .login-head {
+	font-size: 18px;
+	color: #353535;
+	border-top: 3px solid #87C71B;
+	padding: 22px 25px 7px
+}
+.login-c .login-form {
+	width: 300px;
+	margin: 0px 25px;
+	clear: both;
+}
+
+.login-c .login-input {
+    display: block;
+    height: 40px;
+	border: 1px solid #f0f0f0;
+	margin: 15px 0px;
+}
+.login-c .login-input p {
+	color:red;
+	font-size:11px;
+}
+.login-c .login-row{
+    display: block;
+    height: 40px;
+	margin: 15px 0px;
+	color: #353535;
+	font-size: 13px;
+}
+.login-c .login-form input {
+	border: none;
+	width: 215px;
+	height: 38px;
+	line-height: 38px;
+	display: block;
+	float: left;
+	font-size: 13px;
+	color: #353535;
+}
+.login-c .login-form input[type=checkbox] {
+	border: medium none;
+    color: #353535;
+    display: block;
+    float: left;
+    font-size: 13px;
+    height: 20px;
+    line-height: 38px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    width: 15px;
+}
+.login-c .login-form i {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	display: block;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.login-c .login-sumbit {
+	background-color: #87c71b;
+    border: 1px solid #6ea019;
+    border-radius: 4px;
+    color: #fdfdfd;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    letter-spacing: 10px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+}
+.login-c .login-sumbit:hover {
+    background-color: #98d139;
+}
+.login-c .login-form .icon-email{
+	float: left;
+	background-image: url("../images/login/email.png");
+}
+.login-c .login-form .icon-lock {
+	float: left;
+	background-image: url("../images/login/lock.png");
+}
+.login-c .login-form .icon-clear{
+	float: right;
+	background-image: url("../images/login/clear.png");
+}
+.login-c .login-form .icon-keyboard{
+	float: right;
+	background-image: url("../images/login/keyboard.png");
+}
+.login-c .QQ {
+	width: 40px;
+	height: 40px;
+	border-radius: 2px;
+	display: block;
+	float: right;
+	text-decoration: none;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url("../images/login/QQ.png");
+	background-color: #c8c8c8;
+	margin-right: 10px;
+}
+.login-c .WX {
+	width: 42px;
+	height: 40px;
+	border-radius: 2px;
+	float: right;
+	display: block;
+	text-decoration: none;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url("../images/login/WX.png");
+	background-color: #c8c8c8;
+}
+.login-c .QQ:hover ,.login-c .WX:hover {
+	background-color: #e6162d;
+}
+.login-c .login-foot {
+    margin-top: 24px;
+}
+.login-c .hr {
+	border-top: 1px solid #f0f0f0;
+	margin-top: 1px;
+	margin-bottom: 2px;
+}
+.login-c .link {
+	color: rgb(53, 53, 53);
+	text-decoration: none;
+}
+.login-c .link:hover {
+	color: #87C71B;
+	text-decoration: underline;
+}
+.login-c #code {
+	margin-top: 10px;
+}
+.login-c #idcode span {
+    display: block;
+    float: left;
+    line-height: 40px;
+}
+/***********************	Code样式	***************************/
+#idcode #ehong-code-input {
+    border: 1px solid #f0f0f0;
+    color: #939393;
+    font-size: 13px;
+    height: 38px;
+    letter-spacing: 2px;
+    margin: 0 10px 0 0;
+    text-align: center;
+    width: 100px;
+}
+#idcode .ehong-idcode-val {
+    cursor: pointer;
+    display: inline;
+    font-family: "Courier New",Courier,monospace;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 4px 6px;
+    position: relative;
+    text-decoration: none;
+    top: 7px;
+}
+#idcode .ehong-idcode-val0 {
+    background-color: #ecfafb;
+}
+#idcode .ehong-idcode-val1 {
+    background-color: #fcefcf;
+}
+#idcode .ehong-idcode-val2 {
+    background-color: #d0f0df;
+}
+#idcode .ehong-idcode-val3 {
+    background-color: #dcddd8;
+}
+#idcode .ehong-idcode-val4 {
+    background-color: #f1deff;
+}
+#idcode .ehong-idcode-val5 {
+    background-color: #ace1f1;
+}
+#idcode .ehong-code-val-tip {
+    color: #1098ec;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 0 0 0 7px;
+    position: relative;
+}
+.ajaxloginclose{
+	background: #87c71c none repeat scroll 0 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    height: 20px;
+    left: 310px;
+    line-height: 20px;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    width: 20px;
+}

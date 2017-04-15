@@ -1,0 +1,396 @@
+
+body {
+    font-family: "微软雅黑";
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+em{
+	font-style:normal;
+}
+.row-full {
+    clear: both;
+    margin: 0 auto;
+    width: 100%;
+}
+.row {
+    clear: both;
+    margin: 0 auto;
+    width: 1200px;
+}
+.head {
+    background-color: #2d2d2d;
+    color: #fff;
+    height: 44px;
+    z-index: 1002;
+    top:0;
+    left:0;
+    position: fixed;
+}
+.logo {
+    background-image: url("../images/head/logo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    float: left;
+    height: 25px;
+    margin: 9.5px 0;
+    width: 153px;
+    display:block;
+}
+.nav {
+    cursor: pointer;
+    float: left;
+    height: 44px;
+    margin-left: 57px;
+}
+.nav .li {
+    border-bottom: 3px solid #2d2d2d;
+    float: left;
+    font-size: 16px;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    width: 80px;
+    transition: all 0.5s ease 0.2s;
+}
+.nav .li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease 0.2s;
+}
+.nav .li:hover {
+    background-color: #252525;
+    border-bottom: 3px solid #121212;
+    color: #87c71b;
+    height: 41px;
+    line-height: 41px;
+}
+.nav .li a:hover {
+    color: #87c71b;
+}
+.nav .active {
+    background-color: #393939;
+    border-bottom: 3px solid #87c71b;
+    color: #fff;
+    height: 41px;
+    line-height: 41px;
+    transition: all 0.5s ease 0.2s;
+}
+.nav .active .triangle {
+    border-bottom-colors: none;
+    border-left-colors: none;
+    border-right-colors: none;
+    border-top-colors: none;
+    border-color: #87c71b transparent transparent #87c71b;
+    border-image: none;
+    border-style: solid;
+    border-width: 3px;
+    float: left;
+    height: 0;
+    margin-top: 3px;
+    width: 0;
+    transition: all 0.5s ease 0.2s;
+}
+.nav .active:hover {
+    background-color: #393939;
+    border-bottom: 3px solid #87c71b;
+    color: #fff;
+    height: 41px;
+    line-height: 41px;
+}
+.nav .active a:hover {
+    color: #fff;
+}
+.nav-right {
+    float: right;
+}
+.nav-right .text-search {
+    float: left;
+    height: 33px;
+    margin: 5.5px 0;
+    transition: width 2s ease 0s;
+    width: 188px;
+}
+.nav-right .icon-search {
+    background-color: #fff;
+    background-image: url("../images/head/search.png");
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    border: medium none;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    display: block;
+    float: left;
+    height: 33px;
+    width: 33px;
+}
+.nav-right .input-search {
+    border: medium none;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    float: left;
+    height: 33px;
+    transition: width 2s ease 0s;
+    width: 153px;
+}
+.nav-right .type-search {
+    background-color: #2d2d2d;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    display: none;
+    float: left;
+    padding: 7px;
+    transition: width 2s ease 0s;
+    width: 175px;
+}
+.nav-right .type-search .type {
+    display: block;
+    float: left;
+    width: 58px;
+}
+.nav-right .type-search .type input[type="radio"] {
+    display: none;
+}
+.nav-right .type-search .type .radio {
+    background-image: url("../images/head/radio.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 18px;
+    width: 18px;
+}
+.nav-right .type-search .type .active {
+    background-image: url("../images/head/radio-ck.png");
+}
+.nav-right .type-search .type label {
+    cursor: pointer;
+    display: block;
+    float: left;
+}
+.nav-right .btn {
+    background-color: #87c71b;
+    border: 1px solid #6ea019;
+    border-radius: 2px;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    margin: 5.5px 13px;
+    text-align: center;
+    text-decoration: none;
+    width: 130px;
+}
+.nav-right .btn:hover {
+	background-color: #98d139;
+}
+.nav-right .btn i {
+    background-image: url("../images/head/customization.png");
+    background-repeat: no-repeat;
+}
+.nav-right .user-info {
+    border-radius: 2px;
+    color: #fff;
+    float: left;
+    font-size: 14px;
+    height: 44px;
+    line-height: 44px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    width: 44px;
+	cursor: pointer;
+}
+.nav-right .user-info:hover {
+    background-color: #131313;
+}
+.nav-right .user-info .user-pic {
+	width: 33px;
+	height: 33px;
+	border:none;
+	margin-top: 5.5px;
+	cursor: pointer;
+}
+.nav-right .user-info .car {
+    background-image: url("../images/head/shop-car.png");
+    background-repeat: no-repeat;
+}
+.nav-right .user-info .user {
+    background-image: url("../images/head/user.png");
+    background-position: 2px 0;
+    background-repeat: no-repeat;
+}
+.nav-right .user-info .next {
+    background-image: url("../images/head/next.png");
+    background-position: 0 7px;
+    background-repeat: no-repeat;
+}
+.nav-right .login-btn {
+    border: 1px solid #87c71b;
+    border-radius: 2px;
+    color: #87c71b;
+    float: left;
+    height: 31px;
+    line-height: 31px;
+    margin: 5.5px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 78px;
+}
+.logout-bar {
+    background-color: #353535;
+    color: #fff;
+    display: none;
+    font-size: 13px;
+    line-height: 30px;
+    margin-top: 44px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: all 2s ease 0s;
+}
+.logout-bar .desc {
+    float: left;
+}
+.logout-bar .more {
+    border: 1px solid #87c71b;
+    border-radius: 2px;
+    color: #87c71b;
+    display: block;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 0 0 20px;
+    text-decoration: none;
+    width: 86px;
+}
+.logout-bar .register-a {
+    background-color: #87c71b;
+    border: 1px solid #6ea019;
+    border-radius: 2px;
+    color: #fff;
+    display: block;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 0 0 20px;
+    text-decoration: none;
+    width: 67px;
+}
+.logout-bar .register-a:hover {
+	background-color: #98d139;
+}
+.logout-bar .logoin-a {
+    color: #fff;
+    display: block;
+    float: left;
+}
+.logout-bar .logoin-a:hover {
+    color: #87c71b;
+}
+.logout-bar .close {
+    background-image: url("../images/head/close.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: right;
+    height: 14px;
+    margin: 8px 0;
+    width: 14px;
+}
+form{
+	margin:0;
+	padding:0;
+}
+.menu-list {
+    background-color: #252525;
+    left: 100px;
+    position: absolute;
+    z-index: 1005;
+    display: none;
+}
+.menu-list .ol {
+    background-position: 20px 14px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #393939;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    line-height: 30px;
+    padding: 3px 20px 3px 42px;
+    text-decoration: none;
+}
+.menu-list .ol:hover {
+	color: #87C71B;
+	background-color: #131313;
+}
+.menu-list .user-name {
+	overflow: hidden;
+    padding-left: 0;
+    width: 90px;
+    color: #87C71B;
+    padding: 3px 20px 3px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: underline;
+}
+.menu-list .enshrine {
+    background-image: url("../images/head/iconi-1.png");
+}
+.menu-list .shopping-cart {
+    background-image: url("../images/head/iconi2-1.png");
+}
+.menu-list .order {
+    background-image: url("../images/head/iconi3-1.png");
+}
+.menu-list .model {
+    background-image: url("../images/head/iconi4-1.png");
+}
+.menu-list .message {
+    background-image: url("../images/head/iconi5-1.png");
+    background-color:#252525;
+    border:none;
+    border-bottom:1px solid #393939;
+    margin:0;
+    overflow: hidden;
+    padding: 3px 20px 3px 42px;
+}
+.menu-list .set-info {
+    background-image: url("../images/head/iconi6-1.png");
+}
+.menu-list .cancel {
+    background-image: url("../images/head/iconi7-1.png");
+}
+
+.menu-list .enshrine:hover {
+    background-image: url("../images/head/icon1.png");
+}
+.menu-list .shopping-cart:hover {
+    background-image: url("../images/head/iconi2.png");
+}
+.menu-list .order:hover {
+    background-image: url("../images/head/iconi3.png");
+}
+.menu-list .model:hover {
+    background-image: url("../images/head/iconi4.png");
+}
+.menu-list .message:hover {
+    background-image: url("../images/head/iconi5.png");
+}
+.menu-list .set-info:hover {
+    background-image: url("../images/head/iconi6.png");
+}
+.menu-list .cancel:hover {
+    background-image: url("../images/head/iconi7.png");
+}
+
+
+
+
+
+

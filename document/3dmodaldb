@@ -1,0 +1,294 @@
+create database 3dmodal
+drop table administrators
+create table administrators
+(
+  id int AUTO_INCREMENT PRIMARY KEY,
+  userName varchar(200) not null,
+  password varchar(50) not null,
+  isSuper int(1) not null default 0,
+  createdTime DATETIME  default CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=gbk;
+
+create table modalCategories
+(
+  id int AUTO_INCREMENT PRIMARY KEY,
+  name varchar(200) not null,
+  description varchar(1000) not null,
+  createdTime DATETIME  default CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=gbk;
+create table modalTags
+(
+  id int AUTO_INCREMENT PRIMARY KEY,
+  name varchar(200) not null,
+  description varchar(1000) not null,
+  createdTime DATETIME  default CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=gbk;
+
+create table modalMaterialCategories
+(
+  id int AUTO_INCREMENT PRIMARY KEY,
+  name varchar(200) not null,
+  description varchar(1000) not null,
+  createdTime DATETIME  default CURRENT_TIMESTAMP
+) ENGINE=INNODB DEFAULT CHARSET=GBK;
+
+create table modalMeterials
+(
+     id int AUTO_INCREMENT PRIMARY KEY,
+	  name varchar(200) not null,
+	  color varchar(20),
+	  price NUMERIC(8,2) not null,
+	  accuracy NUMERIC(8,2) not null,
+	  size varchar(50),
+	  technology varchar(500),
+	  workday varchar(50),
+	  special varchar(1000),
+	  suitableProduct varchar(500),
+	  unSuitableProduct varchar(500), 
+	  description varchar(1000) not null,
+	  image varchar(500) not null,
+	  thumbImage varchar(500) not null,
+	  smallImage varchar(500) not null,
+	  meterialCategory_ID int  not null references modalMaterialCategories(id),
+	  createdTime DATETIME  default CURRENT_TIMESTAMP
+) engine=innodb default charset=gbk;
+
+create table modalBases
+(
+   id varchar(50) not null primary key,
+   name varchar(500) not null,
+   keyword varchar(500),
+   isPublished int(1) not null default 0,
+   publishedTime datetime null,
+   operatorUserName varchar(50) not null,
+   operatorName varchar(50) not null,
+   lastUpdatedTime datetime default CURRENT_TIMESTAMP,
+   createdTime DATETIME  default CURRENT_TIMESTAMP   
+) ENGINE=INNODB default charset=gbk;
+create table modalNews
+(
+  id varchar(50) not null PRIMARY KEY references modalbases(id),  
+  content varchar(1000) not null
+) ENGINE=InnoDB DEFAULT CHARSET=gbk;
+
+create table modalBases_Tags
+(
+   id int AUTO_INCREMENT PRIMARY KEY,
+   modal_id varchar(50) not null references modalNews(id),
+   tag_id int not null references modalTags(id),
+   createdTime DATETIME  default CURRENT_TIMESTAMP
+)engine =innoDb default charset=gbk;
+
+alter table modalBases drop column publishedTime;
+alter table modalBases add column publishedDateFrom datetime;
+alter table modalBases add column publishedDateTo datetime;
+
+create table modals
+(
+  id varchar(50) not null PRIMARY KEY references modalbases(id),  
+  attachment varchar(500),
+  attachmentSize varchar(10),
+  meterial_Id int references modalMeterials(id),
+  category_id int references modalCategories(id),
+  isDownloadable int(1) not null default 1,
+  image varchar(500) not null,
+  thumbImage varchar(500) not null,
+  smallImage varchar(500) not null,
+  description text
+) ENGINE=innodb default charset=gbk;
+
+create table modalMedias
+(
+   id int auto_increment primary key,
+   isSelected int(1) not null default 1,
+   path varchar(500) not null,
+   relativePath2 varchar(500),
+   relativePath3 varchar(500),
+   modal_id varchar(50) not null references modals(id) 
+) ENGINE=innodb default charset=gbk;
+
+create table modal_Meterials
+(
+   id int AUTO_INCREMENT PRIMARY KEY,
+   modal_id varchar(50) not null references modals(id),
+   meterial_Id int not null references  modalMeterials(id),
+   createdTime DATETIME  default CURRENT_TIMESTAMP
+)engine =innoDb default charset=gbk;
+
+ALTER TABLE modalBases ADD COLUMN isDeleted int(1) not null default 0;
+ALTER TABLE modalBases add column deletedTime datetime default current_timestamp;
+alter table modals drop column meterial_Id;
+alter table modals add column shownType varchar(10);
+alter table modals add column shownDescription text;
+alter table modals add column shownVedio varchar(500);
+alter table administrators add isBuildIn int(1) not null default 0;
+
+create table dbbackups
+(
+   id int auto_increment primary key,
+   name varchar(100) not null,
+   path varchar(500) not null,
+   createdTime datetime not null default current_timestamp
+) engine=innodb default charset=gbk;
+
+alter table modalNews
+add introducation varchar(200);
+alter table modalNews
+MODIFY column content text;
+alter table modals
+add introducation varchar(200);
+
+create table users
+(
+   id varchar(50) not null primary key,
+   email varchar(50) not null,
+   password varchar(50) not null,
+   image varchar(500),
+   telephone varchar(50),
+   note varchar(2000),
+   shippingName varchar(200),
+   shippingAddress varchar(500),
+   createdTime datetime not null default current_timestamp
+)engine=innodb default charset=gbk;
+
+create table requirements
+(
+    id int auto_increment primary key,
+    description varchar(2000) not null,
+    user_id varchar(50) not null REFERENCES users(id),
+    modal_id varchar(50) references modalbases(id),
+    createdTime datetime not null default current_timestamp
+) engine=innodb default charset=gbk;
+
+create table wishlists
+(
+   id int auto_increment primary key,
+   modal_id varchar(50) not null references modalbases(id),
+   user_id varchar(50) not null references users(id),
+   createdTime datetime not null default current_timestamp
+)engine=innodb default charset=gbk;
+create table shoppingCarts
+(
+   id int auto_increment primary key,
+   modal_id varchar(50) not null references modalbases(id),
+   user_id varchar(50) not null references users(id),
+   quantity int not null default 0,
+   createdTime datetime not null default current_timestamp
+) engine=innodb default charset=gbk;
+
+create table questions
+(
+   id int auto_increment primary key,
+   question varchar(5000) not null,
+   answer varchar(5000),
+   user_id varchar(50) not null REFERENCES users(id),
+   answerTime datetime,
+   createdTime datetime not null default current_timestamp
+) engine=innodb default charset=gbk;
+
+create table messages
+(
+   id int auto_increment primary key,
+   content varchar(5000) not null,
+   user_id varchar(50) not null REFERENCES users(id),
+   createdTime datetime not null default current_timestamp
+) engine=innodb default charset=gbk;
+
+alter table modals
+add isfrontmodal int(1) not null default 0;
+alter table modals
+add ispassed int(1) not null default 1;
+
+
+create table helps
+(
+   id varchar(50) not null primary key,
+   title varchar(2000) not null,
+   content text,
+   createdTime datetime not null default current_timestamp
+)engine=innodb default charset=gbk;
+
+alter table modalbases
+drop column operatorName;
+alter table modalbases
+add author varchar(50);
+
+alter table shoppingcarts
+add meterial_id int not null references modalmeterials(id)
+
+alter table shoppingcarts
+add size decimal(5,2);
+alter table shoppingcarts
+add weight decimal(5,2);
+
+
+
+
+INSERT INTO `modal_meterials`(`modal_id`, `meterial_Id`, `createdTime`)
+select a.id,b.id,now() from modals a, modalmeterials b
+
+alter table shoppingCarts
+MODIFY   size varchar(50)
+
+create table orders
+(
+   id varchar(50) primary key,
+   number varchar(50) not null,
+   totalPrice decimal(8,2) not null,
+   shippingName varchar(100) not null,
+   shippingTelephone varchar(100) not null,
+   shippingAddress varchar(100) not null,
+   userId varchar(50) not null references users(id),
+   status smallInt not null default 0,
+   createdTime datetime not null default current_timestamp
+)engine=innodb default charset=gbk;
+
+create table orderItems
+(
+    id int auto_increment primary key,
+    modalId varchar(50) not null references modalbases(id),
+    quantity int not null default 0,
+    size decimal(5,2) not null default 0,
+    weight decimal(5,2) not null default 0,
+    modalName varchar(500) not null,
+    modalImage varchar(500),
+    modalThumbImage varchar(500),
+    modalSmallImage varchar(500),
+    meterialId int not null references modalMeterials(id),
+    meterialName varchar(200),
+    meterialImage varchar(500),
+    meterialThumbImage varchar(500),
+    meterialSmallImage varchar(500),
+    price NUMERIC(8,2) not null,
+    totalPrice NUMERIC(8,2) not null,
+    orderId varchar(50) not null references orders(id),
+    createdTime datetime not null default current_timestamp
+)engine=innodb default charset=gbk;
+
+alter table orders
+add unique key uniqueKey_OrderNumber (number);
+create table payments
+(
+    id int auto_increment primary key,
+    orderNumber varchar(50) not null references orders(number),
+    tradeNo varchar(100),
+    tradeStatus varchar(100),
+    userId varchar(50) not null references users(id),
+    createdTime datetime not null default current_timestamp
+)engine=innodb default charset=gbk;
+
+create table paymentHistoryLogs
+(
+    id int auto_increment primary key,
+    paymentId int not null references payments(id),
+    notifyId varchar(500),
+    notifyTime varchar(50),
+    notifyType varchar(50),
+    responseContent varchar(5000),
+    createdTime datetime not null default current_timestamp
+)engine=innodb default charset=gbk;
+alter table modals
+add defaultMeterial_Id int references modalMeterials(id);
+alter table orders add points bigint;
+alter table users
+add points bigint;

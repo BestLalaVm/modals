@@ -1,0 +1,18 @@
+.footer
+{
+	display:none !important;
+}
+body.login
+{
+	background-color:#3D3D71 !important;
+}
+body.login .logo
+{
+	color:white;
+	font-size:25px;
+	width:294px;
+	margin-bottom:10px;
+}
+.form-validation-error{
+	color:red;
+}
