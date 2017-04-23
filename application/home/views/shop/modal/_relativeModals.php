@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="productCaption clearfix">
-                <a data-bind="attr:{href:('<?= site_url("shop/modal/detail?id=")?>'+id)}">
+                <a data-bind="attr:{href:('<?= site_url("shop/modal/detail/")?>'+id)}">
                     <h5 data-bind="html:name"></h5>
                     <h3 data-bind="html:introducation"></h3>
                 </a>

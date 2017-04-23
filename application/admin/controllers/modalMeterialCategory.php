@@ -12,7 +12,8 @@ class modalMeterialCategory extends My_Controller
 	public function index(){
 		$this->layout->title("模式材料类别列表");
 		$data["list"] = $this->modalMeterialCategory->getAll();
-		
+        $data["error"]=$this->gettmpCrossData("error");
+
 		$this->layout->view("modalMeterialCategory/index",$data);
 	}
 	
@@ -81,9 +82,15 @@ class modalMeterialCategory extends My_Controller
 	
 	public function delete($id)
 	{
-		$this->modalMeterialCategory->delete($id);
-		
-		redirect(site_url("modalMeterialCategory/index"));
-		return;
+	    try
+        {
+            $this->modalMeterialCategory->delete($id);
+        }
+        catch (Exception $e)
+        {
+            $this->settmpCrossData("error",$e->getMessage());
+        }
+
+        redirect(site_url("modalMeterialCategory/index"));
 	}
 }

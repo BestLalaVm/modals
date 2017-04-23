@@ -38,7 +38,7 @@ class modalnews extends My_Controller
 
         if(is_null($data))
         {
-            redirect(site_url("modalnews/index"));
+            show_404();
             return;
         }
 

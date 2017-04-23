@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="<?php echo site_url("../assets/images/favicon.ico")?>">
-    <title>云端作业子系统</title>
+    <link rel="shortcut icon" href="<?php echo site_url("../assets/images/logo_model2.png")?>">
+    <title>3D创意产品与打印在线交易与服务系统</title>
     <?=$css_for_layout?>
     <?= $js_for_layout ?>
 </head>

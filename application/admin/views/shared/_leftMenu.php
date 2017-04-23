@@ -69,8 +69,8 @@
         });
 
         $menuItems.each(function () {
-            var itemhref = $(this).find("a").attr("href");
-            if (window.location.href.indexOf(itemhref) == 0) {
+            var itemhref = $(this).find("a").attr("href").replace("/index","/").toLowerCase();
+            if (window.location.href.toLowerCase().indexOf(itemhref) == 0) {
                 $(this).addClass("active");
 
                 $(this).parent().parent().addClass("active");

@@ -14,4 +14,14 @@ class MY_Model extends CI_Model
 	{
 		parent::__construct();
 	}
+
+    protected function escapeSqlValue($value)
+    {
+        return $this->db->escape($value);
+    }
+
+    protected function escapeLikeSqlValue($value)
+    {
+        return $this->db->escape_like_str($value);
+    }
 }

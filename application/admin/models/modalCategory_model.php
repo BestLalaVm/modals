@@ -1,5 +1,5 @@
 <?php
-class modalCategory_model extends CI_Model
+class modalCategory_model extends MY_Model
 {
 	public $id;
 	public $name;

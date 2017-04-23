@@ -1,5 +1,5 @@
 <?php
-class modalMeterial_model extends CI_Model
+class modalMeterial_model extends MY_Model
 {
 	public $id;
 	public $name;
@@ -24,7 +24,7 @@ class modalMeterial_model extends CI_Model
 		"SELECT a.id,a.name,a.color,
 				a.price,a.accuracy,a.size,a.technology,a.workday,
 				a.smallImage,b.name as categoryName,a.createdTime 
-		FROM modalmeterials a join modalmaterialcategories b on a.meterialCategory_ID=b.id order by a.id desc";
+		FROM modalmeterials a left join modalmaterialcategories b on a.meterialCategory_ID=b.id order by a.id desc";
 		$query = $this->db->query($sql);
 
 		return $query->result();
@@ -69,6 +69,13 @@ class modalMeterial_model extends CI_Model
 
 	public function delete($id)
 	{
+	    $this->db->select("count(1) as count");
+	    $result = $this->db->get_where("modalMeterials",array("id"=>$id));
+	    if($result->row()->count>0)
+        {
+            throw new Exception("该材料已被模型库使用, 请更改对应模型(用户模型及系统模型)之后在进行删除!");
+        }
+
 		$this->db->where("id",$id)->delete("modalMeterials");
 	}
 	

@@ -50,11 +50,21 @@
                 self.paginations = {
                     totalCount: ko.observable(0),
                     pageIndex: ko.observable(1),
-                    pageSize: ko.observable(1)
+                    pageSize: ko.observable(6)
                 }
+                self.paginations.totalPages = ko.computed(function () {
+                    return Math.ceil(self.paginations.totalCount() / self.paginations.pageSize());
+                });
+
+                self.paginations.pageIndex.subscribe(function (nv) {
+                    self.query();
+                });
 
                 self.query = function () {
-                    $.get("<?php echo site_url("shop/profile/getWishList")?>", {}, function (d) {
+                    $.get("<?php echo site_url("shop/profile/getWishList")?>", {
+                        pageIndex:self.paginations.pageIndex(),
+                        pageSize:self.paginations.pageSize()
+                    }, function (d) {
                         var ds=[];
                         for(var index=0;index<d.datas.length;index++){
                             var item = d.datas[index];

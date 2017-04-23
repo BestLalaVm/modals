@@ -1,5 +1,5 @@
 <?php
-class modalTag_model extends CI_Model
+class modalTag_model extends MY_Model
 {
 	public $id;
 	public $name;

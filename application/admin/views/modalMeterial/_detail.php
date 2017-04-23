@@ -11,9 +11,10 @@
 		</div>
 	</div>
 	<div class="control-group">
-		<label class="control-label">材料类别</label>
+		<label class="control-label">材料类别<span class="required">*</span></label>
 		<div class="controls">
 		   <?php echo form_dropdown("meterialCategory_ID",$meterialCategory_list,$meterialCategory_ID,array("class"=>"medium  m-wrap"))?>
+            <div class="form-validation-error"><?php echo form_error("meterialCategory_ID")?></div>
 		</div>
 	</div>
 	<div class="control-group">

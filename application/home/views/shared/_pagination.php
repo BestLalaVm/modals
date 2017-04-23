@@ -6,12 +6,30 @@
  * Time: 12:35 PM
  */
 $pageCount = ceil($totalCount / $pageSize);
+
+
+$url=site_url($url);
+$url = trim($url,'?');
+$url=$_SERVER["PATH_INFO"];
+$params = explode("&",$_SERVER["QUERY_STRING"]);
+$istart=false;
+for($index=0;$index<count($params);$index++) {
+    $itemValue = trim($params[$index],"?");
+    if(empty($itemValue))continue;
+    if (strpos($itemValue, "page") === 0) {
+        continue;
+    }
+    if (!$istart) {
+        $istart=true;
+        $url.="?".$itemValue;
+    }else{
+        $url.="&".$itemValue;
+    }
+}
 $split="?";
-if(strpos($url,"?")>0)
-{
+if($istart){
     $split="&";
 }
-$url=site_url($url);
 ?>
 <div class="text-center" id="pagination-container">
     <ul class="pagination" data-bind="visible:totalPage()>1">
@@ -23,7 +41,7 @@ $url=site_url($url);
         </li>
         <!--/ko-->
         <li>
-            <a href="" data-bind="attr:{href:'<?php echo $url.$split;?>pageIndex='+totalPage()+'&pageSize='+pageSize()}">最后一页</a>
+            <a href="" data-bind="attr:{href:lastPage}">最后一页</a>
         </li>
     </ul>
 </div>
@@ -39,6 +57,14 @@ $url=site_url($url);
 
             self.totalPage = ko.computed(function () {
                 return Math.ceil(self.totalCount() / self.pageSize());
+            });
+
+            self.lastPage = ko.computed(function(){
+               var qs = 'pageIndex='+self.totalPage()+'&pageSize='+self.pageSize();
+
+               var pUrl="<?php echo $url;?>"+"<?=$split?>"+qs;
+
+               return pUrl;
             });
 
             self.pageItems = ko.computed(function(){

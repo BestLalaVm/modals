@@ -1,5 +1,5 @@
 <?php
-class modalNew_model extends CI_Model
+class modalNew_model extends MY_Model
 {
 	public $id;
 	public $name;
@@ -30,6 +30,7 @@ class modalNew_model extends CI_Model
                         continue;
                     }
 
+                    $filterValue = $this->escapeLikeSqlValue($filterValue);
                     $where = $where." and $fileterKey like '%$filterValue%'";
                 }
             }

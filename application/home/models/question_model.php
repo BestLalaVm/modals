@@ -5,7 +5,7 @@
  * Date: 3/4/2017
  * Time: 1:18 PM
  */
-class question_model extends CI_Model
+class question_model extends MY_Model
 {
     public function create($userId,$data)
     {

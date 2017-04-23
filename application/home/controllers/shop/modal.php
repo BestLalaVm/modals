@@ -85,7 +85,7 @@ class modal extends Shop_Controller
         $modal = $this->dbreader->getmodalByid($id,$userId);
         if($modal==null || empty($modal["id"]))
         {
-            redirect(site_url("shop/modal/index"));
+            show_404();
             return;
         }
 

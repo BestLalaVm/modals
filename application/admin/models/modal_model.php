@@ -33,6 +33,7 @@ class modal_model extends MY_Model
                         continue;
                     }
 
+                    $filterValue = $this->escapeLikeSqlValue($filterValue);
                     $where = $where." and $fileterKey like '%$filterValue%'";
                 }
             }
@@ -97,7 +98,7 @@ class modal_model extends MY_Model
 			
 			$this->db->update("modalbases",$modalBaseData);		
 			$this->db->where("id",$data["id"]);
-			$this->db->update("modals",$modalData);	
+			$this->db->update("modals",$modalData);
 		}else {
 			$modalBaseData["id"] = uniqid();
 			$modalBaseData["createdTime"]=date("Y-m-d H:i:s");
@@ -217,7 +218,7 @@ class modal_model extends MY_Model
 			}
 			if(!in_array($item->meterial_Id, $newData["meterials"]))
 			{
-				$newData["meterials"][]=$item->tag_id;
+				$newData["meterials"][]=$item->meterial_Id;
 			}
 			
 			$ismediaExists=false;

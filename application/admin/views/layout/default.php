@@ -21,6 +21,19 @@
 			<div class="container-fluid">
 				<!-- BEGIN PAGE HEADER-->
 				<?= $CI->load->view("/shared/_pageNav",null,true);?>
+                <?php if(isset($error)):?>
+                    <div class="error top-summary-message">
+                        <?php echo $error; ?>
+                    </div>
+                    <script type="application/javascript">
+                        $(function () {
+                            setTimeout(function () {
+                               $(".top-summary-message").hide();
+                            },5000)
+                        })
+                    </script>
+                <?php endif;?>
+
 				<!-- END PAGE HEADER-->
 				<div id="dashboard">
 					<?=$content_for_layout?>

@@ -13,7 +13,7 @@ class help extends Shop_Controller
         $result = $this->help->get($id);
         if(is_null($result))
         {
-            redirect(site_url("shop/home/index"));
+            show_404();
             return;
         }
         $data = array("id"=>$result->id,"title"=>$result->title,"content"=>$result->content);

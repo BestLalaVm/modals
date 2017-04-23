@@ -26,16 +26,16 @@ if(isset($_REQUEST["endDate"]))
 <div class="row-fluid filter-block">
     <div class="span3">
         <div class="control-group">
-            <label class="control-label span2" for="firstName">名称</label>
-            <div class="controls span10">
+            <label class="control-label span4" for="firstName">名称</label>
+            <div class="controls span8">
                 <input type="text" id="name" name="name" class="m-wrap span12" placeholder="模型名称" value="<?php echo $filterName;?>">
             </div>
         </div>
     </div>
     <div class="span3">
         <div class="control-group">
-            <label class="control-label span2" for="firstName">关键字</label>
-            <div class="controls span10">
+            <label class="control-label span4" for="firstName">关键字</label>
+            <div class="controls span8">
                 <input type="text" id="keyword" name="keyword" class="m-wrap span12" placeholder="关键字" value="<?php echo $filterKeyword;?>">
             </div>
         </div>
@@ -56,7 +56,6 @@ if(isset($_REQUEST["endDate"]))
 <div class="row-fluid">
     <div class="span10"></div>
     <div class="span2 block-right">
-
         <button type="submit" class="btn blue">搜索</button>
         <button type="reset" class="btn btn-primary">重置</button>
     </div>
@@ -68,13 +67,13 @@ if(isset($_REQUEST["endDate"]))
         <thead>
         <tr role="row">
             <th style="width: 160px;">编号</th>
-            <th style="width: 407px;">名称</th>
-            <th style="width: 80px;">审核通过?</th>
+            <th style="width: 200px;">名称</th>
+            <th style="width: 120px;">审核通过?</th>
             <th style="width: 150px;">图片</th>
             <th style="width: 200px;">关键字</th>
-            <th style="width: 80px;">是否发布</th>
-            <th style="width: 150px;">开始发布时间</th>
-            <th style="width: 150px;">结束发布时间</th>
+            <th style="width: 120px;">是否发布</th>
+            <th style="width: 180px;">开始发布时间</th>
+            <th style="width: 180px;">结束发布时间</th>
             <th style="width: 160px;">采编人</th>
             <th style="width: 160px;">创建时间</th>
             <th style="width: 80px;"></th>

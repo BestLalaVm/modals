@@ -1,5 +1,5 @@
 <?php
-class employee_model extends CI_Model
+class employee_model extends MY_Model
 {
 	public $id;
 	public $name;

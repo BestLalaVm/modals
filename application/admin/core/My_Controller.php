@@ -64,6 +64,17 @@ class My_UnAuthController extends CI_Controller
 		$this->layout->css(WebUtil::Url("/assets/media/css/login.css"));
 		$this->layout->css(WebUtil::Url("/assets/css/login-app.css"));
 	}
+
+    protected function settmpCrossData($key,$value){
+        $this->session->set_userdata(array($key=>$value));
+    }
+
+    protected function gettmpCrossData($key){
+        $value = $this->session->userdata($key);
+        $this->session->unset_userdata($key);
+
+        return $value;
+    }
 }
 
 class My_Controller extends My_UnAuthController

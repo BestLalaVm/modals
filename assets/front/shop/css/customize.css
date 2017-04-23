@@ -330,8 +330,9 @@
 }
 .bannercontainer .slide-info .productImage
 {
-    width: 720px;
-    max-width: 850px;
+    /*width: 720px;*/
+    width: 560px;
+    max-width: 560px;
     max-height: 380px;
     position: static !important;
     display: inline-block;
@@ -346,7 +347,8 @@
 }
 .bannercontainer .slide-info .productImage img{
     max-height: 360px;
-    max-width: 720px;
+    /*max-width: 720px;*/
+    max-width: 480px;
 }
 .dropdown .btn.dropdown-toggle{
     border-radius:0px !important;
@@ -456,4 +458,7 @@
 }
 #dvmodalContainer >.media > .media-left .productSlider{
     width: auto !important;
+}
+.disabled{
+    color: #dddddd !important;
 }

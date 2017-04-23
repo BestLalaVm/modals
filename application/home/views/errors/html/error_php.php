@@ -1,33 +1,28 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-
-<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
-
-<h4>A PHP Error was encountered</h4>
-
-<p>Severity: <?php echo $severity; ?></p>
-<p>Message:  <?php echo $message; ?></p>
-<p>Filename: <?php echo $filepath; ?></p>
-<p>Line Number: <?php echo $line; ?></p>
-
-<?php if (defined('SHOW_DEBUG_BACKTRACE') && SHOW_DEBUG_BACKTRACE === TRUE): ?>
-
-	<p>Backtrace:</p>
-	<?php foreach (debug_backtrace() as $error): ?>
-
-		<?php if (isset($error['file']) && strpos($error['file'], realpath(BASEPATH)) !== 0): ?>
-
-			<p style="margin-left:10px">
-			File: <?php echo $error['file'] ?><br />
-			Line: <?php echo $error['line'] ?><br />
-			Function: <?php echo $error['function'] ?>
-			</p>
-
-		<?php endif ?>
-
-	<?php endforeach ?>
-
-<?php endif ?>
-
-</div>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>500 系统数据库连接异常</title>
+<!-- CUSTOM CSS -->
+<link href="/assets/front/shop/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/front/shop/css/style.css" rel="stylesheet">
+<link href="/assets/front/shop/css/error.css" rel="stylesheet">
+</head>
+<body class="body-wrapper error-container">
+<!-- MAIN CONTENT SECTION -->
+<section class="mainContent clearfix notFound">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12">
+                <h1>500</h1>
+                <h2><?=$message?>!</h2>
+            </div>
+        </div>
+        <div class="row">
+            <a class="btn-link" style="font-size: 16px;" href="/">进入3D模型库</a>
+            <a class="btn-link" style="font-size: 16px;" href="/shop">进入云端模型</a>
+        </div>
+    </div>
+</section>
+</body>
+</html>

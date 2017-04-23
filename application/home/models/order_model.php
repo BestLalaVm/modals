@@ -5,7 +5,7 @@
  * Date: 3/5/2017
  * Time: 4:32 PM
  */
-class order_model extends CI_Model
+class order_model extends MY_Model
 {
     private $orderStatusSQl = "(case `status` when 0 then '未支付' when 1 then '支付成功' when 2 then '已发货' when 3 then '取消订单' else '订单失败' END )";
 
@@ -138,8 +138,9 @@ from shoppingcarts a join modalbases b on a.modal_id=b.id join modals c on c.id=
             $pageSize=20;
         }
 
+        $sql.=" limit ".$pageSize." offset ".(($pageIndex-1) * $pageSize);
+
         $result =  $this->db->query($sql)->result();
-        $order=array();
 
         $data = array("totalCount"=>$totalCount,"datas"=>$result,"pageIndex"=>$pageIndex,"pageSize"=>$pageSize);
 
@@ -152,7 +153,7 @@ from shoppingcarts a join modalbases b on a.modal_id=b.id join modals c on c.id=
                      b.quantity as itemQuantity,b.size as itemSize,b.weight as itemWeight,b.modalName as itemModalName,
                      b.modalSmallImage,b.meterialName,b.price as itemPrice,b.totalPrice as itemTotalPrice,b.modalId as itemModalId
               from orders a JOIN orderitems b on a.id=b.orderId 
-              where userId='$userId' and number='$number' order by a.createdTime desc";
+              where userId='$userId' and number='{$this->escapeSqlValue($number)}' order by a.createdTime desc";
 
         $result =  $this->db->query($sql)->result();
         $order=array("detail"=>array(),"shippingAddress"=>array(),"items"=>array());

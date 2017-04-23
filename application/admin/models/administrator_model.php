@@ -1,5 +1,5 @@
 <?php
-class administrator_model extends CI_Model
+class administrator_model extends MY_Model
 {
 	public $id;
 	public $userName;

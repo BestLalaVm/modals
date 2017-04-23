@@ -34,11 +34,20 @@
                 self.paginations = {
                     totalCount: ko.observable(0),
                     pageIndex: ko.observable(1),
-                    pageSize: ko.observable(1)
+                    pageSize: ko.observable(6)
                 }
+                self.paginations.totalPages = ko.computed(function () {
+                    return Math.ceil(self.paginations.totalCount() / self.paginations.pageSize());
+                });
 
+                self.paginations.pageIndex.subscribe(function (nv) {
+                    self.query();
+                });
                 self.query = function () {
-                    $.get("<?php echo site_url("shop/profile/getMessages")?>", {}, function (d) {
+                    $.get("<?php echo site_url("shop/profile/getMessages")?>", {
+                        pageIndex:self.paginations.pageIndex(),
+                        pageSize:self.paginations.pageSize()
+                    }, function (d) {
                         self.datas(d.datas);
                         self.paginations.totalCount(d.totalCount);
                         self.paginations.pageIndex(d.pageIndex);

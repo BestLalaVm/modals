@@ -1,5 +1,5 @@
 <?php
-class help_model extends CI_Model
+class help_model extends MY_Model
 {
     const INTRODUCATION = "introducation";
     const HELPCENTER = "helpcenter";

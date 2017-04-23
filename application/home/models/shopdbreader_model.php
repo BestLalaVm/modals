@@ -5,14 +5,14 @@
  * Date: 3/1/2017
  * Time: 9:27 PM
  */
-class shopdbreader_model extends CI_Model
+class shopdbreader_model extends MY_Model
 {
     function gettop10modalOverview()
     {
         $todayValue=date("Y-m-d",time());
         $where = " and (publishedDateFrom <= '$todayValue' OR publishedDateFrom is null) and (publishedDateTo>='$todayValue' OR publishedDateTo is null)";
         if(!empty($categoryId)) {
-            $where .= " and b.category_id=" . $categoryId;
+            $where .= " and b.category_id=" . $this->escapeSqlValue($categoryId);
         }
 
         $sql="SELECT a.id,a.name,b.thumbImage,b.image,b.isDownloadable,b.introducation,b.attachment,
@@ -39,18 +39,26 @@ class shopdbreader_model extends CI_Model
 
     public function getMeterials($pageIndex=0,$pageSize=5)
     {
+        $sql="SELECT 
+                `name`,`price`,`accuracy`,`thumbImage`,`image`,`suitableProduct`,`unSuitableProduct`,special
+              FROM `modalmeterials`";
+
+        $countSql="SELECT COUNT(1) as total FROM ($sql) as a";
+
+        $totalCount = $this->db->query($countSql)->row()->total;
+
         if($pageIndex<=0)
         {
             $pageIndex=1;
         }
         $offset = ($pageIndex-1) * $pageSize;
-        $sql="SELECT 
-                `name`,`price`,`accuracy`,`thumbImage`,`image`,`suitableProduct`,`unSuitableProduct`,special
-              FROM `modalmeterials` ORDER by createdTime desc limit $pageSize offset $offset";
-
+        $sql.=" ORDER by createdTime desc limit $pageSize offset $offset";
         $query = $this->db->query($sql);
 
-        return $query->result();
+        $result = $query->result();
+        $data = array("totalCount"=>$totalCount,"datas"=>$result,"pageIndex"=>$pageIndex,"pageSize"=>$pageSize);
+
+        return $data;
     }
 
     function getProfileRequirements($userId,$pageIndex=1,$pageSize=10)
@@ -241,8 +249,8 @@ on d.modal_id=c.id where user_id='$userId' order by a.createdTime desc
 
     function getProfileModals($email,$pageIndex=1,$pageSize=10)
     {
-
-        $where=" operatorUserName='$email' ";
+        $email = $this->escapeSqlValue($email);
+        $where=" operatorUserName=$email";
         $baseSql="
         SELECT a.id,a.name,a.keyword,
 				a.author,a.isPublished,

@@ -1,5 +1,5 @@
 <?php
-class requirement_model extends CI_Model
+class requirement_model extends MY_Model
 {
 	public $id;
 	public $userName;
@@ -12,8 +12,8 @@ class requirement_model extends CI_Model
         $where=" 1=1 ";
         if(array_key_exists("keyword",$filter))
         {
-            $keyword = $filter["keyword"];
-            $where.=" and (description like '%$keyword%')";
+            $keyword = $this->escapeLikeSqlValue($filter["keyword"]);
+            $where.=" and (description like '%$keyword%' or email like '%$keyword%')";
         }
 
         $baseSql="

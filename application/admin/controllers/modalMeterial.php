@@ -11,7 +11,8 @@ class modalMeterial extends My_Controller
 	public function index(){
 		$this->layout->title("模式材料列表");
 		$data["list"] = $this->modalMeterial->getAll();
-		
+        $data["error"]=$this->gettmpCrossData("error");
+
 		$this->layout->view("modalMeterial/index",$data);
 	}
 	
@@ -80,10 +81,13 @@ class modalMeterial extends My_Controller
 	
 	public function delete($id)
 	{
-		$this->modalMeterial->delete($id);
+	    try{
+            $this->modalMeterial->delete($id);
+        }catch(Exception $e){
+            $this->settmpCrossData("error",$e->getMessage());
+        }
 		
 		redirect(site_url("modalMeterial/index"));
-		return;
 	}
 	
 	private function initialize($data){
@@ -161,7 +165,11 @@ class modalMeterial extends My_Controller
 		{
 			$data["description"]="";
 		}
-		
+        if(!isset($data["meterialCategory_ID"]))
+        {
+            $data["meterialCategory_ID"]="";
+        }
+
 		return $data;
     }
     
@@ -170,7 +178,7 @@ class modalMeterial extends My_Controller
     	$this->load->model("modalMeterialCategory_model","modalMeterialCategory");
     	$departs = $this->modalMeterialCategory->getOptions();
     
-    	$data=array();
+    	$data=array(""=>"");
     	foreach($departs as $item )
     	{
     		$data[$item->id]=$item->name;

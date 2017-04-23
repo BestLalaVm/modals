@@ -1,5 +1,5 @@
 <?php
-class modalMeterialCategory_model extends CI_Model
+class modalMeterialCategory_model extends MY_Model
 {
 	public $id;
 	public $name;
@@ -40,7 +40,13 @@ class modalMeterialCategory_model extends CI_Model
 
 	public function delete($id)
 	{
-		$this->db->where("id",$id)->delete("modalMaterialCategories");
+	    $this->db->select("count(1) as count");
+	    $result = $this->db->get_where("modalmeterials",array("meterialCategory_ID",$id));
+        $ind = $result->row();
+        if($ind->count>0) {
+            throw new Exception("该材料类别已被材料使用,请删除后重试!");
+        }
+        $this->db->where("id", $id)->delete("modalMaterialCategories");
 	}
 	
 	public function getOptions()

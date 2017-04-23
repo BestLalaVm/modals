@@ -5,7 +5,7 @@
  * Date: 3/5/2017
  * Time: 4:32 PM
  */
-class order_model extends CI_Model
+class order_model extends MY_Model
 {
     const INITIALIZE=0;
     const SUCCESS=1;
@@ -33,6 +33,7 @@ class order_model extends CI_Model
                         continue;
                     }
 
+                    $filterValue = $this->escapeLikeSqlValue($filterValue);
                     $where = $where." and (number like '%$filterValue%' or a.shippingName like '%$filterValue%' or a.shippingAddress like '%$filterValue%' or a.shippingTelephone like '%$filterValue%')";
                 }
             }

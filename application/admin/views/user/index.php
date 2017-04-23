@@ -29,11 +29,11 @@ $index = 0;
             <th style="width: 120px;">编号</th>
             <th style="width: 300px;">Email</th>
             <th style="width: 100px;">积分</th>
-            <th style="width: 120px;">头像</th>
+            <th style="width: 240px;">头像</th>
             <th style="width: 180px;">电话</th>
             <th style="width: 180px;">姓名</th>
             <th style="width: 420px;">收货地址</th>
-            <th style="width: 480px;">描述</th>
+            <th style="width: 380px;">描述</th>
             <th style="width: 260px;">创建时间</th>
         </tr>
         </thead>
@@ -43,9 +43,9 @@ $index = 0;
                 <td class=" sorting_1"><?= $item->id; ?></td>
                 <td class=" "><?= $item->email; ?></td>
                 <td class=" "><?= $item->points; ?></td>
-                <td class=" ">
+                <td class=" " style="padding: 0px;">
                     <?php if(!empty($item->image)):?>
-                       <img src="<?=$item->image?>" alt="<?=$item->email;?>" style="max-width: 70px;max-height: 60px;">
+                        <img src="<?=$item->image?>" style="max-width: 70px;max-height: 60px;">
                     <?php endif;?>
                 </td>
                 <td class=" "><?= $item->telephone; ?></td>

@@ -1,5 +1,5 @@
 <?php
-class depart_model extends CI_Model
+class depart_model extends MY_Model
 {
 	public $id;
 	public $name;

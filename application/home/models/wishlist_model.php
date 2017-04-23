@@ -5,7 +5,7 @@
  * Date: 3/5/2017
  * Time: 4:32 PM
  */
-class wishlist_model extends CI_Model
+class wishlist_model extends MY_Model
 {
     public function add($userId, $modalId)
     {

@@ -23,6 +23,7 @@ class modal_model extends MY_Model
             {
                 if(!empty($filterValue))
                 {
+                    $filterValue = $this->escapeSqlValue($filterValue);
                     if($fileterKey=="startDate")
                     {
                         $where = $where." and (publishedDateFrom >= '$filterValue' OR publishedDateFrom is null) and (publishedDateTo>='$filterValue' OR publishedDateTo is null)";

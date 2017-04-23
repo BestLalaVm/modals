@@ -1,5 +1,5 @@
 <?php
-class user_model extends CI_Model
+class user_model extends MY_Model
 {
 	public $id;
 	public $userName;
@@ -12,7 +12,7 @@ class user_model extends CI_Model
         $where=" 1=1 ";
         if(array_key_exists("keyword",$filter))
         {
-            $keyword = $filter["keyword"];
+            $keyword = $this->escapeLikeSqlValue($filter["keyword"]);
            $where.=" and (email like '%$keyword%' OR shippingName LIKE '%$keyword%' or shippingAddress like '%$keyword%')";
         }
 

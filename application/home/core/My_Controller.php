@@ -134,11 +134,6 @@ class My_UnAuthController extends CI_Controller
 
 class My_Controller extends My_UnAuthController
 {
-    function __construct()
-    {
-        parent::__construct();
-    }
-
     protected function is_post(){
         return $this->input->server('REQUEST_METHOD') == 'POST';
     }
@@ -222,24 +217,24 @@ class My_Controller extends My_UnAuthController
                 $this->deployjsCss();*/
             }
 
-            protected function getCurrentUserId(){
+    protected function getCurrentUserId(){
                 if(MyAuth::isLogin()){
                     return MyAuth::getCurrentUser()->id;
                 }
 
                 return null;
             }
-        }
+}
 
-        class Shop_Controller extends My_Controller
-        {
-            protected function loadLayout()
+class Shop_Controller extends My_Controller
+{
+   protected function loadLayout()
             {
                 $this->layout_view="shop/layout/default.php";
                 $this->load->library("layout");
             }
 
-            protected function loadResources()
+   protected function loadResources()
             {
 
                 $this->layout->css(WebUtil::Url("/assets/front/shop/plugins/jquery-ui/jquery-ui.css"));

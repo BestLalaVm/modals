@@ -1,5 +1,5 @@
 <?php
-class question_model extends CI_Model
+class question_model extends MY_Model
 {
 	public $id;
 	public $userName;
@@ -19,6 +19,7 @@ class question_model extends CI_Model
                     switch ($fileterKey)
                     {
                         case "keyword":
+                            $filterValue = $this->escapeLikeSqlValue($filterValue);
                             $where.=" and (question like '%$filterValue%' or answer like '%$filterValue%')";
                             break;
                         case "startDate":

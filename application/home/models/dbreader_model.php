@@ -5,20 +5,24 @@
  * Date: 2/25/2017
  * Time: 3:38 PM
  */
-class dbreader_model extends CI_Model
+class dbreader_model extends MY_Model
 {
     function getmodalOverview($categoryId=null,$userId=null,$pageIndex=1,$pageSize=10)
     {
         $todayValue=date("Y-m-d",time());
         $where = " and (publishedDateFrom <= '$todayValue' OR publishedDateFrom is null) and (publishedDateTo>='$todayValue' OR publishedDateTo is null)";
         if(!empty($categoryId)) {
-            $where .= " and b.category_id=" . $categoryId;
+            $where .= " and b.category_id=" . $this->escapeSqlValue($categoryId) ;
         }
 
         $sql="SELECT a.id,a.name,b.thumbImage,b.isDownloadable,b.attachment,(SELECT t1.id FROM wishlists t1 where t1.modal_id = a.id and t1.user_id='$userId' limit 1) as wishId
 		 FROM modalbases a join modals b on a.id=b.id where isdeleted=0 and a.isPublished=1 and isfrontmodal=0 ".$where;
 
-        $sql=$sql." order by createdTime desc limit $pageSize";
+        if($pageIndex<=1) {
+            $pageIndex = 1;
+        }
+        //$sql=$sql." order by createdTime desc limit $pageSize";
+        $sql.=" order by createdTime desc limit ".$pageSize." offset ".(($pageIndex-1) * $pageSize);
 
         $modals = $this->db->query($sql)->result();
         $data=array();
@@ -56,9 +60,11 @@ class dbreader_model extends CI_Model
             return array();
         }
 
+        /*
         $mapedModalIds = array_map(function($v){
-            return "'$v'";
-        },$modalIds);
+            return "'{$this->escapeSqlValue($v)}'";
+        },$modalIds);*/
+        $mapedModalIds = $this->escapeSqlValue($modalIds);
 
         $sql="SELECT a.id,a.name,b.thumbImage,b.isDownloadable,b.attachment,(SELECT t1.id FROM wishlists t1 where t1.modal_id = a.id and t1.user_id='$userId' limit 1) as wishId
 		 FROM modalbases a join modals b on a.id=b.id where isdeleted=0 and a.isPublished=1 and a.id in (".implode(",",$mapedModalIds).")";
@@ -129,13 +135,15 @@ class dbreader_model extends CI_Model
             $where = " and (publishedDateFrom <= '$todayValue' OR publishedDateFrom is null) and (publishedDateTo>='$todayValue' OR publishedDateTo is null)";
 
             foreach ($filters as $key=>$value){
-                if(isset($value)){
+                if(!empty($value)){
                     $sqlValue = $value;
                     switch ($key){
                         case "keyword":
+                            $sqlValue =$this->escapeLikeSqlValue($value);
                             $where.=" and (a.keyword like '%$sqlValue%' or a.name like '%$sqlValue%'or b.introducation like '%$sqlValue%')";
                             break;
                         case "author":
+                            $sqlValue =$this->escapeLikeSqlValue($value);
                             $where.=" and (a.author like '%$sqlValue%' or a.operatorUserName like '%$sqlValue%' )";
                             break;
                         case "dateFrom":
@@ -290,18 +298,10 @@ class dbreader_model extends CI_Model
         $todayValue=date("Y-m-d",time());
         $where = " and (publishedDateFrom <= '$todayValue' OR publishedDateFrom is null) and (publishedDateTo>='$todayValue' OR publishedDateTo is null)";
         if(!empty($excludeModalId)) {
-            $where .= " and a.id<> '{$excludeModalId}'";
+            $where .= " and a.id<> {$this->escapeSqlValue($excludeModalId)}";
         }
 
-        $tagWhere="";
-        foreach ($relativeTagids as $rmodalId)
-        {
-            if(!empty($tagWhere))
-            {
-                $tagWhere.=",";
-            }
-            $tagWhere.="'{$rmodalId}'";
-        }
+        $tagWhere = implode(",",$this->escapeSqlValue($relativeTagids)) ;
         if(!empty($tagWhere))
         {
             $where.=" and exists(select 1 from modalbases_tags t1 where t1.modal_id=a.id and t1.tag_id in ($tagWhere)) ";
@@ -313,6 +313,11 @@ class dbreader_model extends CI_Model
         $sql=$sql." order by createdTime desc limit 8";
 
         $modals = $this->db->query($sql)->result();
+        if(count($modals)==0){
+            $modals = $this->db->query("SELECT a.id,a.name,b.thumbImage,b.introducation,b.attachment,b.isDownloadable
+		 FROM modalbases a join modals b on a.id=b.id where isdeleted=0 and a.isPublished=1 order by createdTime desc limit 8")->result();
+        }
+
         $data=array();
         foreach ($modals as $item)
         {
@@ -327,15 +332,8 @@ class dbreader_model extends CI_Model
         $todayValue=date("Y-m-d",time());
         $where = " and (publishedDateFrom <= '$todayValue' OR publishedDateFrom is null) and (publishedDateTo>='$todayValue' OR publishedDateTo is null)";
 
-        $tagWhere="";
-        foreach ($relativeTagids as $rmodalId)
-        {
-            if(!empty($tagWhere))
-            {
-                $tagWhere.=",";
-            }
-            $tagWhere.="'{$rmodalId}'";
-        }
+
+        $tagWhere =implode(",",$this->escapeSqlValue($relativeTagids));
         if(!empty($tagWhere))
         {
             $where.=" and exists(select 1 from modalbases_tags t1 where t1.modal_id=a.id and t1.tag_id in ($tagWhere)) ";
@@ -347,6 +345,10 @@ class dbreader_model extends CI_Model
         $sql=$sql." order by createdTime desc limit 8";
 
         $modals = $this->db->query($sql)->result();
+        if(count($modals)==0){
+            $modals = $this->db->query("SELECT a.id,a.name,b.introducation,a.createdTime
+		 FROM modalbases a join modalnews b on a.id=b.id where isdeleted=0 and a.isPublished=1  order by createdTime desc limit 8")->result();
+        }
         $data=array();
         foreach ($modals as $item)
         {
@@ -362,6 +364,7 @@ class dbreader_model extends CI_Model
         $where = " and (publishedDateFrom <= '$todayValue' OR publishedDateFrom is null) and (publishedDateTo>='$todayValue' OR publishedDateTo is null)";
         if(!empty($keyword))
         {
+            $keyword=$this->escapeSqlValue($keyword);
             $where.=" and (a.keyword like '%$keyword%' OR b.introducation like '%$keyword%' OR c.introducation like '%$keyword%' OR a.name like '%$keyword%')";
         }
         $sql="

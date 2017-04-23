@@ -5,7 +5,7 @@
  * Date: 3/4/2017
  * Time: 1:18 PM
  */
-class user_model extends CI_Model
+class user_model extends MY_Model
 {
     public $id;
     public $email;
@@ -19,6 +19,7 @@ class user_model extends CI_Model
     public function register($data)
     {
         $email = $data["emailAddress"];
+        $email = $this->escapeSqlValue($email);
         $existsSql = "select count(1) as total from users where email='$email'";
         $row = $this->db->query($existsSql)->row();
         if($row->total>=1)

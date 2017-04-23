@@ -61,17 +61,8 @@
             self.items = ko.observableArray([]);
 
             var init=function () {
-                /*
-                 $.get("", { }, function (d) {
-                 if(d.success)
-                 {
-                 self.items(d.datas);
-                 }else
-                 {
-
-                 }
-                 }, "json");*/
-                self.items(<?=json_encode($data["meterials"]);?>)
+                var mdata =  <?=json_encode($data["meterials"]);?>;
+                self.items(mdata.datas);
             }
 
             init();

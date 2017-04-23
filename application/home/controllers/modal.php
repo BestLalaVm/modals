@@ -97,7 +97,7 @@ class modal extends My_Controller
       $modal = $this->dbreader->getmodalByid($id,$userId);
       if($modal==null || empty($modal["id"]))
       {
-          redirect(site_url("modal/index"));
+          show_404();
           return;
       }
 
