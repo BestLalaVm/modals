@@ -72,7 +72,7 @@ $CI = &get_instance ();
 		    <?php echo form_hidden("attachment",$attachment)?>
 		    <?php echo form_hidden("attachmentSize",$attachmentSize) ?>  
 		    <?php if(!empty($attachment)):?>
-		    <a href="<?php echo $attachment; ?>" target="_blank">下载附件:<?php echo $attachmentSize; ?>kb</a>
+		    <a href="<?php echo $attachment; ?>" target="_blank">下载附件:<?php echo $attachmentSize; ?></a>
 		    <?php endif;?>
 			<div class="form-validation-error"><?php echo form_error("attachment")?></div>
 		</div>

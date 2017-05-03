@@ -12,7 +12,8 @@ class order_model extends MY_Model
     const SHIPPINGTOCUSTOMER=2;
     const CANCELLED=3;
     const FAILED=4;
-    private $orderStatusSQl = "(case `status` when 0 then '未支付' when 1 then '支付成功' when 2 then '已发货' when 3 then '取消订单' else '订单失败' END )";
+    const DONE=5;
+    private $orderStatusSQl = "(case `status` when 0 then '未支付' when 1 then '已付款' when 2 then '已发货' when 3 then '取消订单' when 5 then '用户已收货' else '订单失败' END )";
 
     function getAll($filter,$pageIndex,$pageSize){
         $where=" 1=1 ";

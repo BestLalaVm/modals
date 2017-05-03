@@ -64,13 +64,21 @@ from shoppingcarts a join modalbases b on a.modal_id=b.id join modals c on c.id=
                 $totalPrice +=$item->weight * $item->quantity* $item->meterialPrice;
             }
 
-            $this->db->insert("orders",array("id"=>$orderId,"number"=>$orderNumber,"totalPrice"=>$totalPrice,
+            $orderArr=array("id"=>$orderId,"number"=>$orderNumber,"totalPrice"=>$totalPrice,
                 "shippingTelephone"=>$shippingAddress["shippingTelephone"],
                 "shippingAddress"=>$shippingAddress["shippingAddress"],
                 "shippingName"=>$shippingAddress["shippingName"],
                 "userId"=>$userId,
-                "status"=>0,"createdTime"=>$now));
+                "status"=>0,"createdTime"=>$now);
+            if($totalPrice<=0){
+                $orderArr["status"]=1;
+                $points = 1;
 
+            }else{
+                $this->db->insert("payments",array("orderNumber"=>$orderNumber,"createdTime"=>$now));
+            }
+
+            $this->db->insert("orders",$orderArr);
             foreach ($orderItemSqls as $itemsql){
                 $this->db->query($itemsql);
             }
@@ -83,7 +91,7 @@ from shoppingcarts a join modalbases b on a.modal_id=b.id join modals c on c.id=
             $this->db->update("users");
 
             $this->db->insert("messages",array("user_id"=>$userId,"content"=>"您有一条新的订单:$orderNumber!","createdTime"=>$now));
-            $this->db->insert("payments",array("userid"=>$userId,"orderNumber"=>$orderNumber,"createdTime"=>$now));
+
             $this->db->trans_complete();
 
             return array("orderNumber"=>$orderNumber,"shippingAddress"=>$shippingAddress,"items"=>$orderItems);
@@ -153,7 +161,7 @@ from shoppingcarts a join modalbases b on a.modal_id=b.id join modals c on c.id=
                      b.quantity as itemQuantity,b.size as itemSize,b.weight as itemWeight,b.modalName as itemModalName,
                      b.modalSmallImage,b.meterialName,b.price as itemPrice,b.totalPrice as itemTotalPrice,b.modalId as itemModalId
               from orders a JOIN orderitems b on a.id=b.orderId 
-              where userId='$userId' and number='{$this->escapeSqlValue($number)}' order by a.createdTime desc";
+              where userId='$userId' and number='{$number}' order by a.createdTime desc";
 
         $result =  $this->db->query($sql)->result();
         $order=array("detail"=>array(),"shippingAddress"=>array(),"items"=>array());
@@ -200,6 +208,9 @@ from shoppingcarts a join modalbases b on a.modal_id=b.id join modals c on c.id=
             $order = $this->db->query("SELECT totalPrice,userId FROM ORDERS WHERE NUMBER='$orderNumber' and status=1")->row();
             if(!is_null($order)){
                 $points = ceil($order->totalPrice);
+                if($points<=0){
+                    $points=1;
+                }
                 $userId=$order->userId;
                 $this->db->query("UPDATE USERS SET points=ifnull(points,0)+$points WHERE id='$userId'");
             }

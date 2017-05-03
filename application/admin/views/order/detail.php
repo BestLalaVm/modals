@@ -1,5 +1,5 @@
 <?php
-$orderStatus = array(order_model::SUCCESS => "已付款", order_model::SHIPPINGTOCUSTOMER => "已发货")
+$orderStatus = array(order_model::SUCCESS => "已付款", order_model::SHIPPINGTOCUSTOMER => "已发货", order_model::DONE => "用户已收货")
 ?>
 <?= form_open(site_url("order/detail") . "/" . $data["detail"]["id"], array("class" => 'form-horizontal')) ?>
     <div class="detail">
@@ -21,7 +21,7 @@ $orderStatus = array(order_model::SUCCESS => "已付款", order_model::SHIPPINGT
         <div class="control-group">
             <label class="control-label">订单状态</label>
             <div class="controls">
-                <?php if ($data["detail"]["status"] == order_model::SUCCESS): ?>
+                <?php if ($data["detail"]["status"] != order_model::FAILED): ?>
                     <?php echo form_dropdown("status", $orderStatus, $data["detail"]["status"], array("class" => "medium  m-wrap")) ?>
                 <?php else: ?>
                     <?php echo order_model::getOrderStatus($data["detail"]["status"]); ?>
@@ -82,7 +82,7 @@ $orderStatus = array(order_model::SUCCESS => "已付款", order_model::SHIPPINGT
             </table>
         </div>
         <div class="form-actions">
-            <?php if ($data["detail"]["status"] == order_model::SUCCESS): ?>
+            <?php if ($data["detail"]["status"] != order_model::FAILED): ?>
                 <?= form_submit("", "保存", array("class" => "btn green")) ?>
             <?php endif; ?>
             <a href="<?= site_url("order/index") ?>" class="btn">返回</a>

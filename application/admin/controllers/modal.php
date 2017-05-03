@@ -65,13 +65,17 @@ class modal extends My_Controller
 		$data["id"]=$id;
 		if($this->is_post())
 		{
-			if($this->form_validation->run()==TRUE)
-			{
-				$data = $this->processUploadedAttachment($data);
-				$this->modal->save($data);
-				redirect(site_url("modal/index"));
-				return;
-			}		
+		    try{
+                if($this->form_validation->run()==TRUE)
+                {
+                    $data = $this->processUploadedAttachment($data);
+                    $this->modal->save($data);
+                    redirect(site_url("modal/index"));
+                    return;
+                }
+            }catch (Exception $e){
+                $data["error"]=$e->getMessage();
+            }
 		}
 		else
 		{
@@ -250,7 +254,15 @@ class modal extends My_Controller
 			$d = $this->upload->data();
 			$data["attachment"]=("/".$relativePath."/".$d["client_name"]);
 			$data["attachmentSize"]=$d["file_size"];
-		}
+		}else{
+		    if(isset($_FILES["newattachment"]["error"]) &&$_FILES["newattachment"]["error"]!=4 ) {
+                $error = $this->upload->display_errors();
+                if (strpos($error, "文件超出") >= 0) {
+                    $error = strip_tags($error) . ", 当前设置允许上传的文件大小为:" . ini_get("upload_max_filesize");
+                }
+                throw new Exception($error);
+            }
+        }
 		
 		return $data;
 	}

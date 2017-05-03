@@ -9,10 +9,6 @@ class shoppingcart_model extends MY_Model
 {
     public function add($userId, $modalId,$meterialId,$quantity,$size=null,$weight=1)
     {
-        $userId = $this->escapeSqlValue($userId);
-        $modalId = $this->escapeSqlValue($modalId);
-        $meterialId = $this->escapeSqlValue($meterialId);
-
         $dt = date("Y-m-d H:i:s");
         $query = $this->db->query("select id,quantity,modal_id from shoppingCarts where user_id='$userId' and meterial_id='$meterialId' and modal_id='$modalId' limit 1");
         $shoppingCart = $query->row();

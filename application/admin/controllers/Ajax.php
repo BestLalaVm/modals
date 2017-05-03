@@ -49,7 +49,7 @@ class Ajax extends My_Controller
 		$relativePath = "assets/uploads/vedios";
 		$config["upload_path"]= $relativePath;
         $config["file_name"]=uniqid("vedio");
-		$config["allowed_types"]="wmv|3gp|mp4|rm|rmvb";
+		$config["allowed_types"]="wmv|3gp|mp4|rm|rmvb|flv";
 		$this->load->library("upload",$config);
 	
 		if($this->upload->do_upload("vedioFile"))
@@ -59,7 +59,7 @@ class Ajax extends My_Controller
 			$data["vedioUrl"]=("/".$relativePath."/".$d["file_name"]);
 		}else {
 			$errors = $this->upload->display_errors();
-			$data["error"]=$errors;
+			$data["error"]="您选择的文件无效,请联系管理员!";
 		}
 	
 		echo json_encode($data);

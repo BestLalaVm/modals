@@ -86,7 +86,7 @@
                                                 <input type="number" data-bind="value:weight" min="1">
                                             </td>
                                             <td class="col-xs-1">
-                                                <input type="text" data-bind="value:size">
+                                                <input type="number" data-bind="value:size">
                                             </td>
                                             <td class="col-xs-1">
                                                 <input type="number" data-bind="value:quantity" min="1">
@@ -164,7 +164,9 @@
             self.quantity = ko.observable(d.quantity);
             self.weight = ko.observable(d.weight);
             self.size = ko.observable(d.size);
-
+            if(!self.size()){
+                self.size(1);
+            }
             self.name = d.name;
             self.shoppingcartMeterialId = ko.observable();
             self.smallimage = d.smallimage;

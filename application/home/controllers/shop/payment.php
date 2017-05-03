@@ -28,6 +28,10 @@ class payment extends Shop_Controller
         if(is_null($data)) {
             redirect("shop/home/index");
         }else {
+            if((float)$data["totalPrice"]==0) {
+                redirect(site_url("shop/order/success/{$data["number"]}"));
+                return;
+            }
             //构造要请求的参数数组，无需改动
             $desciption="";
             foreach ($data["items"] as $item){
