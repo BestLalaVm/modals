@@ -41,12 +41,12 @@ from shoppingcarts a join modalbases b on a.modal_id=b.id join modals c on c.id=
                 $quantity=$item->quantity;
                 $size=$item->size;
                 $weight=$item->weight;
-                $modalName=$item->modalName;
+                $modalName=$this->escapeSqlValue($item->modalName);
                 $modalImage=$item->modalImage;
                 $modalThumbImage=$item->modalThumbImage;
                 $modalSmallImage=$item->modalSmallImage;
                 $meterial_id=$item->meterial_id;
-                $meterialName=$item->meterialName;
+                $meterialName=$this->escapeSqlValue($item->meterialName);
                 $meterialSmallImage=$item->meterialSmallImage;
                 $meterialThumbImage=$item->meterialThumbImage;
                 $meterialImage=$item->meterialImage;
@@ -57,9 +57,9 @@ from shoppingcarts a join modalbases b on a.modal_id=b.id join modals c on c.id=
 
                 $orderItemSqls[]="INSERT INTO `orderitems`(`modalId`, `quantity`, `size`, `weight`, `modalName`, `modalImage`, `modalThumbImage`, `modalSmallImage`, 
                                                           `meterialId`, `meterialName`, `meterialImage`, `meterialThumbImage`, `meterialSmallImage`, `orderId`, `createdTime`,price,totalPrice)values
-                                 ('${modalId}','${quantity}','${size}','${weight}','${modalName}',
+                                 ('${modalId}','${quantity}','${size}','${weight}',${modalName},
                                  '${modalImage}','${modalThumbImage}','${modalSmallImage}',
-                                 '${meterial_id}','${meterialName}','${meterialImage}',
+                                 '${meterial_id}',${meterialName},'${meterialImage}',
                                  '${meterialThumbImage}','${meterialSmallImage}','${orderId}','${now}',${meterialPrice},${itemTotalPrice})";
                 $totalPrice +=$item->weight * $item->quantity* $item->meterialPrice;
             }
@@ -72,8 +72,7 @@ from shoppingcarts a join modalbases b on a.modal_id=b.id join modals c on c.id=
                 "status"=>0,"createdTime"=>$now);
             if($totalPrice<=0){
                 $orderArr["status"]=1;
-                $points = 1;
-
+                $this->db->query("UPDATE USERS SET points=ifnull(points,0)+1 WHERE id='$userId'");
             }else{
                 $this->db->insert("payments",array("orderNumber"=>$orderNumber,"createdTime"=>$now));
             }
