@@ -20,7 +20,7 @@ class user_model extends MY_Model
     {
         $email = $data["emailAddress"];
         $email = $this->escapeSqlValue($email);
-        $existsSql = "select count(1) as total from users where email='$email'";
+        $existsSql = "select count(1) as total from users where email=$email";
         $row = $this->db->query($existsSql)->row();
         if($row->total>=1)
         {
