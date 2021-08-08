@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T08:09:53.217Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="vsg6xviHZkI0pObTqz4U" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T08:11:12.144Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="3-YRqoQ9tarar0ZAX_lx" version="14.9.5" type="github">
   <diagram id="V-bsonHjYA0dQaBgQLGK" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -123,6 +123,9 @@
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-43" value="快速开发行业应用" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="400" y="370" width="810" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-256" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.396;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;shape=arrow;dashed=1;strokeWidth=3;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-44" target="eGzCPl6W_x_xD8wYSiGv-222">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-44" value="政务分发服务" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="1855" y="331" width="210" height="374" as="geometry" />
@@ -402,7 +405,7 @@
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-206" value="其他公共服务" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
           <mxGeometry x="667" y="780" width="90" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="eGzCPl6W_x_xD8wYSiGv-220" value="&lt;b&gt;安&lt;br&gt;&lt;br&gt;全&lt;br&gt;&lt;br&gt;通&lt;br&gt;&lt;br&gt;道&lt;/b&gt;" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;fillColor=none;dashed=1;perimeterSpacing=11;strokeWidth=5;strokeColor=#CCE5FF;" vertex="1" parent="1">
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-220" value="&lt;b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;安&lt;br&gt;&lt;br&gt;全&lt;br&gt;&lt;br&gt;通&lt;br&gt;&lt;br&gt;道&lt;/b&gt;" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;fillColor=none;dashed=1;perimeterSpacing=11;strokeWidth=5;strokeColor=#CCE5FF;" vertex="1" parent="1">
           <mxGeometry x="2140" y="70" width="50" height="1000" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-248" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-222" target="eGzCPl6W_x_xD8wYSiGv-236">
