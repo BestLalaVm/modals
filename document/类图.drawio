@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T12:59:24.616Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="xJXPYRnk9aVOM8zMvFfz" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T13:01:40.366Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="YaHQ-DyfSTyY4vEA6Mxr" version="14.9.5" type="github">
   <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
@@ -8,19 +8,19 @@
           <mxGeometry x="20" y="20" width="500" height="710" as="geometry" />
         </mxCell>
         <mxCell id="Sei2wfSlkflAdpRAVItV-62" value="主体" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=10;align=center;" vertex="1" parent="1">
-          <mxGeometry x="30" y="80" width="160" height="110" as="geometry" />
+          <mxGeometry x="40" y="480" width="180" height="110" as="geometry" />
         </mxCell>
         <mxCell id="Sei2wfSlkflAdpRAVItV-63" value="+ Id" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Sei2wfSlkflAdpRAVItV-62">
-          <mxGeometry y="26" width="160" height="26" as="geometry" />
+          <mxGeometry y="26" width="180" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Sei2wfSlkflAdpRAVItV-64" value="+ 用户Id: varchar(30)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Sei2wfSlkflAdpRAVItV-62">
-          <mxGeometry y="52" width="160" height="26" as="geometry" />
+          <mxGeometry y="52" width="180" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Sei2wfSlkflAdpRAVItV-65" value="+ 创建时间: datetime" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Sei2wfSlkflAdpRAVItV-62">
-          <mxGeometry y="78" width="160" height="26" as="geometry" />
+          <mxGeometry y="78" width="180" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Sei2wfSlkflAdpRAVItV-66" value="认证对象" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=10;align=center;" vertex="1" parent="1">
-          <mxGeometry x="30" y="290" width="180" height="150" as="geometry" />
+          <mxGeometry x="40" y="170" width="180" height="150" as="geometry" />
         </mxCell>
         <mxCell id="Sei2wfSlkflAdpRAVItV-67" value="+ Id" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Sei2wfSlkflAdpRAVItV-66">
           <mxGeometry y="26" width="180" height="26" as="geometry" />
@@ -46,18 +46,8 @@
         <mxCell id="Sei2wfSlkflAdpRAVItV-76" value="+ 密码: varchar(50)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Sei2wfSlkflAdpRAVItV-73">
           <mxGeometry y="78" width="180" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="Sei2wfSlkflAdpRAVItV-80" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Sei2wfSlkflAdpRAVItV-75" target="Sei2wfSlkflAdpRAVItV-67">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="340" y="250" as="sourcePoint" />
-            <mxPoint x="212" y="400" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="250" y="185" />
-              <mxPoint x="250" y="329" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="Sei2wfSlkflAdpRAVItV-81" value="微信认证对象" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=10;align=center;" vertex="1" parent="1">
-          <mxGeometry x="330" y="270" width="180" height="110" as="geometry" />
+          <mxGeometry x="330" y="310" width="180" height="110" as="geometry" />
         </mxCell>
         <mxCell id="Sei2wfSlkflAdpRAVItV-82" value="+ Id" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Sei2wfSlkflAdpRAVItV-81">
           <mxGeometry y="26" width="180" height="26" as="geometry" />
@@ -67,6 +57,28 @@
         </mxCell>
         <mxCell id="Sei2wfSlkflAdpRAVItV-84" value="+ 微信标识: varchar(50)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Sei2wfSlkflAdpRAVItV-81">
           <mxGeometry y="78" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Sei2wfSlkflAdpRAVItV-86" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="340" y="380" as="sourcePoint" />
+            <mxPoint x="500" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Sei2wfSlkflAdpRAVItV-88" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="340" y="380" as="sourcePoint" />
+            <mxPoint x="500" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Sei2wfSlkflAdpRAVItV-90" value="继承" style="endArrow=block;endSize=16;endFill=0;html=1;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="Sei2wfSlkflAdpRAVItV-83">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="360" y="610" as="sourcePoint" />
+            <mxPoint x="220" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="270" y="375" />
+              <mxPoint x="270" y="260" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
