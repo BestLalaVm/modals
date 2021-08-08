@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T07:23:33.039Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="pSH1EN6KgAIPY55QkHfl" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T07:24:48.913Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="wTRdxICWLNTnwCsGz3N7" version="14.9.5" type="github">
   <diagram id="V-bsonHjYA0dQaBgQLGK" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -242,6 +242,9 @@
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-114" value="平台默认组" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="650" y="839.5" width="80" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-116" target="eGzCPl6W_x_xD8wYSiGv-139">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-116" value="事件总线" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=14;fontStyle=0;flipH=0;spacingRight=0;spacingLeft=14;rounded=0;strokeColor=#000000;fillColor=#CCCCFF;" vertex="1" parent="1">
           <mxGeometry x="1270" y="834" width="120" height="40" as="geometry" />
         </mxCell>
@@ -286,6 +289,9 @@
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-138" value="协调管理" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
           <mxGeometry x="932" y="419" width="140" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-139" value="数据分发服务" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Web_Slots.svg;rounded=0;strokeColor=#000000;fillColor=#CCCCFF;" vertex="1" parent="1">
+          <mxGeometry x="1301" y="498" width="57.99999999999999" height="64" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
