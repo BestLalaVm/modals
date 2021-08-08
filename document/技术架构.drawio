@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T07:18:50.852Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="yKLKAg-jwhyPOsJqxZx7" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T07:19:26.356Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="fjKU8cm6JjyvSm-3oWaH" version="14.9.5" type="github">
   <diagram id="V-bsonHjYA0dQaBgQLGK" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -242,7 +242,7 @@
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-114" value="平台默认组" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="650" y="839.5" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="eGzCPl6W_x_xD8wYSiGv-116" value="事件总线" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=14;fontStyle=0;fillColor=#FFFFFF;flipH=0;spacingRight=0;spacingLeft=14;rounded=0;strokeColor=#000000;" vertex="1" parent="1">
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-116" value="事件总线" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=14;fontStyle=0;flipH=0;spacingRight=0;spacingLeft=14;rounded=0;strokeColor=#000000;fillColor=#CCCCFF;" vertex="1" parent="1">
           <mxGeometry x="1060" y="834" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-123" value="表单引擎" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.emr_engine;fillColor=#F58534;gradientColor=none;rounded=0;strokeColor=#000000;" vertex="1" parent="1">
@@ -259,6 +259,9 @@
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-128" value="&lt;b&gt;V5引擎&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="420" y="570" width="720" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-129" value="保安从业服务" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
+          <mxGeometry x="430" y="420" width="140" height="45" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
