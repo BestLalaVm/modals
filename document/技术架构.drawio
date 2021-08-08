@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T08:21:03.348Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="Qqt5tppGf45Acq9sCObH" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T08:21:28.396Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="k6Q6rxRGEtk3_Oe_OAbw" version="14.9.5" type="github">
   <diagram id="V-bsonHjYA0dQaBgQLGK" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -418,7 +418,7 @@
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-209" value="共同依赖于组织用户基础服务" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="eGzCPl6W_x_xD8wYSiGv-208">
           <mxGeometry x="0.043" relative="1" as="geometry">
-            <mxPoint y="1" as="offset" />
+            <mxPoint x="-53" y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-206" value="其他公共服务" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
