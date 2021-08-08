@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T07:19:26.356Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="fjKU8cm6JjyvSm-3oWaH" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T07:21:06.353Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="lrwyF4MIESOTujN6sBlQ" version="14.9.5" type="github">
   <diagram id="V-bsonHjYA0dQaBgQLGK" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -130,7 +130,7 @@
           <mxGeometry x="400" y="370" width="810" height="330" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-44" value="基础服务" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="400" y="730" width="810" height="240" as="geometry" />
+          <mxGeometry x="400" y="730" width="1080" height="240" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-91" value="注册中心" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="150" y="280" width="220" height="80" as="geometry" />
@@ -243,7 +243,7 @@
           <mxGeometry x="650" y="839.5" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-116" value="事件总线" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=14;fontStyle=0;flipH=0;spacingRight=0;spacingLeft=14;rounded=0;strokeColor=#000000;fillColor=#CCCCFF;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="834" width="120" height="40" as="geometry" />
+          <mxGeometry x="1270" y="834" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-123" value="表单引擎" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.emr_engine;fillColor=#F58534;gradientColor=none;rounded=0;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="470" y="605" width="122" height="60" as="geometry" />
@@ -262,6 +262,15 @@
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-129" value="保安从业服务" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
           <mxGeometry x="430" y="420" width="140" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-130" value="企业保险" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
+          <mxGeometry x="430" y="490" width="140" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-131" value="企业培训" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
+          <mxGeometry x="590" y="490" width="140" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-132" value="RABC" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
+          <mxGeometry x="990" y="891.5" width="140" height="45" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
