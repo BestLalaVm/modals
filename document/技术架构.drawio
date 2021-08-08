@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T12:38:12.224Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="X7m3TKRRVJrXJ-I6QZbQ" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T12:41:46.526Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="57z7ewnPw7aNkPqU5i0t" version="14.9.5" type="github">
   <diagram id="V-bsonHjYA0dQaBgQLGK" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -131,7 +131,7 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1270" y="854" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1120" y="926" />
+              <mxPoint x="1120" y="874" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -343,10 +343,10 @@
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-185" value="平台默认组" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="656" y="911.5" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="eGzCPl6W_x_xD8wYSiGv-189" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.019;entryY=0.744;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-186" target="eGzCPl6W_x_xD8wYSiGv-156">
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-189" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.019;entryY=0.744;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-286" target="eGzCPl6W_x_xD8wYSiGv-156">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1440" y="927" />
+              <mxPoint x="1440" y="980" />
               <mxPoint x="1440" y="631" />
             </Array>
           </mxGeometry>
@@ -356,11 +356,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="eGzCPl6W_x_xD8wYSiGv-215" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.005;entryY=0.57;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-186" target="eGzCPl6W_x_xD8wYSiGv-44">
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-215" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.005;entryY=0.57;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;exitX=1.015;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-286">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1853.9499999999998" y="534.1800000000001" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1760" y="926" />
-              <mxPoint x="1760" y="544" />
+              <mxPoint x="1440" y="980" />
+              <mxPoint x="1440" y="916" />
+              <mxPoint x="1760" y="916" />
+              <mxPoint x="1760" y="534" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -370,7 +373,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-186" value="事件总线" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=14;fontStyle=0;flipH=0;spacingRight=0;spacingLeft=14;rounded=0;strokeColor=#000000;fillColor=#CCCCFF;" vertex="1" parent="1">
-          <mxGeometry x="1210" y="906.5" width="120" height="40" as="geometry" />
+          <mxGeometry x="1220" y="853.5" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-187" value="RABC" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
           <mxGeometry x="470" y="780" width="80" height="45" as="geometry" />
@@ -578,6 +581,12 @@
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-283" value="..." style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
           <mxGeometry x="2275" y="670" width="140" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-289" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=60;entryDy=40;entryPerimeter=0;endArrow=classic;endFill=1;strokeWidth=1;fillColor=none;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-286" target="eGzCPl6W_x_xD8wYSiGv-186">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-286" value="后台服务" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/compute/Function_Apps.svg;rounded=0;dashed=1;strokeColor=#CCE5FF;strokeWidth=5;fillColor=#CCE5FF;" vertex="1" parent="1">
+          <mxGeometry x="1246" y="937" width="68" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
