@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T10:27:54.428Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="UymbMJP4pecn4gcTZZvw" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T10:29:53.579Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="xohxE6QFYKu5apeot-yY" version="14.9.5" type="github">
   <diagram id="V-bsonHjYA0dQaBgQLGK" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -438,6 +438,15 @@
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-249" value="省级系统数据汇集到公安部级系统" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="eGzCPl6W_x_xD8wYSiGv-248">
           <mxGeometry x="0.7776" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-279" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=3;shape=arrow;dashed=1;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-222">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2070" y="557" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2090" y="557" />
+              <mxPoint x="2090" y="557" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-222" value="分发客户端" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
