@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T10:32:50.091Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="x5gM_lcNM1XYLU5JNsuy" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T10:33:20.777Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="Ygq-OEQjzze_AWNrdb3O" version="14.9.5" type="github">
   <diagram id="V-bsonHjYA0dQaBgQLGK" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -362,6 +362,11 @@
               <mxPoint x="1760" y="926" />
               <mxPoint x="1760" y="544" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-284" value="业务数据及材料审批信息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="eGzCPl6W_x_xD8wYSiGv-215">
+          <mxGeometry x="-0.221" y="-3" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-186" value="事件总线" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=14;fontStyle=0;flipH=0;spacingRight=0;spacingLeft=14;rounded=0;strokeColor=#000000;fillColor=#CCCCFF;" vertex="1" parent="1">
