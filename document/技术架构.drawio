@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-08T06:21:10.026Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="7TNHp-QwuGriKddf01UN" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-08T06:32:20.824Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67" etag="qvID2dmlJV9EePdThxS3" version="14.9.5" type="github">
   <diagram id="V-bsonHjYA0dQaBgQLGK" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -14,7 +14,7 @@
           <mxGeometry x="150" y="400" width="64" height="64" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-9" value="认证中心" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="150" y="100" width="660" height="130" as="geometry" />
+          <mxGeometry x="150" y="100" width="590" height="130" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-10" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/security/Security_Center.svg;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="158" y="140" width="56.00000000000001" height="68" as="geometry" />
@@ -22,50 +22,83 @@
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.462;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-12" target="eGzCPl6W_x_xD8wYSiGv-9">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="120" y="570" />
-              <mxPoint x="120" y="160" />
+              <mxPoint x="245" y="280" />
+              <mxPoint x="100" y="280" />
+              <mxPoint x="100" y="160" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-14" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="eGzCPl6W_x_xD8wYSiGv-13">
           <mxGeometry x="0.3319" y="-1" relative="1" as="geometry">
+            <mxPoint x="129" y="41" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-32" value="&lt;b&gt;未认证&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="eGzCPl6W_x_xD8wYSiGv-13">
+          <mxGeometry x="-0.2957" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="eGzCPl6W_x_xD8wYSiGv-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.547;entryY=-0.065;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-12" target="eGzCPl6W_x_xD8wYSiGv-15">
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=3;labelBorderColor=none;entryX=0.267;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="eGzCPl6W_x_xD8wYSiGv-12" target="eGzCPl6W_x_xD8wYSiGv-30">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="840" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-31" value="&lt;b&gt;已认证&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="eGzCPl6W_x_xD8wYSiGv-17">
+          <mxGeometry x="-0.3273" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-12" value="是否登入?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;rounded=0;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="190" y="520" width="110" height="100" as="geometry" />
+          <mxGeometry x="190" y="480" width="110" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="eGzCPl6W_x_xD8wYSiGv-15" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/networking/Route_Tables.svg;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="210" y="820" width="64" height="62" as="geometry" />
-        </mxCell>
-        <mxCell id="eGzCPl6W_x_xD8wYSiGv-19" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Chart.svg;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="560" y="408" width="50" height="48" as="geometry" />
-        </mxCell>
-        <mxCell id="eGzCPl6W_x_xD8wYSiGv-20" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Logic_Apps_Custom_Connector.svg;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="224" y="910" width="50" height="50" as="geometry" />
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-19" value="监控" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Chart.svg;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="760" width="50" height="48" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-21" value="账号密码" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/identity/Identity_Governance.svg;rounded=0;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="250" y="133" width="64" height="64" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-22" value="微信认证" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
-          <mxGeometry x="334" y="142.5" width="80" height="45" as="geometry" />
+          <mxGeometry x="334" y="120" width="80" height="45" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-23" value="钉钉认证" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
-          <mxGeometry x="430" y="142.5" width="80" height="45" as="geometry" />
+          <mxGeometry x="334" y="170" width="80" height="45" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-24" value="手机短信认证" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
-          <mxGeometry x="530" y="142.5" width="80" height="45" as="geometry" />
+          <mxGeometry x="430" y="120" width="80" height="45" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-25" value="域认证" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
-          <mxGeometry x="620" y="142.5" width="80" height="45" as="geometry" />
+          <mxGeometry x="430" y="170" width="80" height="45" as="geometry" />
         </mxCell>
         <mxCell id="eGzCPl6W_x_xD8wYSiGv-26" value="CA对接" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
-          <mxGeometry x="710" y="142.5" width="80" height="45" as="geometry" />
+          <mxGeometry x="520" y="120" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-27" value="二维码登入" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
+          <mxGeometry x="520" y="170" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-28" value="指纹认证" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
+          <mxGeometry x="610" y="120" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-29" value="三方对接" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#66B2FF;" vertex="1" parent="1">
+          <mxGeometry x="610" y="170" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-30" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/networking/Route_Filters.svg;rounded=0;strokeColor=#000000;fillColor=#66B2FF;" vertex="1" parent="1">
+          <mxGeometry x="219.18" y="670" width="96.82" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-35" value="动态路由" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#E6E6E6;" vertex="1" parent="1">
+          <mxGeometry x="270" y="768" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-36" value="负载均衡" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#E6E6E6;" vertex="1" parent="1">
+          <mxGeometry x="170" y="840" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-37" value="限流" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#E6E6E6;" vertex="1" parent="1">
+          <mxGeometry x="170" y="900" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-38" value="熔断/重试" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#E6E6E6;" vertex="1" parent="1">
+          <mxGeometry x="270" y="840" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="eGzCPl6W_x_xD8wYSiGv-39" value="认证授权控制" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#E6E6E6;" vertex="1" parent="1">
+          <mxGeometry x="270" y="900" width="80" height="45" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
